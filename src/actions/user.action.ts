@@ -75,9 +75,7 @@ export async function getRandomUsers(){
   try {
     const userId = await getDbUserId();
 
-    if (!userId) {
-      throw new Error("User ID is null");
-    }
+    if (!userId) return [];
 
     const users = await prisma.user.findMany({
       where: {
