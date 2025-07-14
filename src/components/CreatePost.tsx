@@ -9,7 +9,7 @@ import { ImageIcon, Loader2Icon, SendIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { createPost } from "@/actions/post.action";
 import toast from "react-hot-toast";
-// import ImageUpload from "./ImageUpload";
+import ImageUpload from "./ImageUpload";
 
 function CreatePost() {
   const { user } = useUser();
@@ -42,22 +42,22 @@ function CreatePost() {
 
   return (
     <Card className="mb-6">
-      <CardContent className="pt-2">
-        <div className="space-y-2">
-          <div className="flex space-x-2">
-            <Avatar className="w-7 h-7">
+      <CardContent className="pt-6">
+        <div className="space-y-4">
+          <div className="flex space-x-4">
+            <Avatar className="w-10 h-10">
               <AvatarImage src={user?.imageUrl || "/avatar.png"} />
             </Avatar>
             <Textarea
               placeholder="What's on your mind?"
-              className="min-h-[100px] resize-none border-none focus-visible:ring-0 px-2 text-base"
+              className="min-h-[100px] resize-none border-none focus-visible:ring-0 p-0 text-base"
               value={content}
               onChange={(e) => setContent(e.target.value)}
               disabled={isPosting}
             />
           </div>
 
-          {/* {(showImageUpload || imageUrl) && (
+          {(showImageUpload || imageUrl) && (
             <div className="border rounded-lg p-4">
               <ImageUpload
                 endpoint="postImage"
@@ -68,9 +68,9 @@ function CreatePost() {
                 }}
               />
             </div>
-          )} */}
+          )}
 
-          <div className="flex items-center justify-between border-t pt-2">
+          <div className="flex items-center justify-between border-t pt-4">
             <div className="flex space-x-2">
               <Button
                 type="button"
