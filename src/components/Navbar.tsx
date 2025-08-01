@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from 'react'
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
+import ProfileButton from "./ProfileButton";
 import { currentUser } from "@clerk/nextjs/server";
 import { syncUser } from "@/actions/user.action";
 
@@ -19,7 +20,7 @@ async function Navbar() {
           </div>
 
           <DesktopNavbar />
-          <MobileNavbar />
+          <MobileNavbar profileButton={<ProfileButton />}/>
         </div>
       </div>
     </nav>

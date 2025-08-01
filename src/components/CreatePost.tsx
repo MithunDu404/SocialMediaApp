@@ -58,8 +58,8 @@ function CreatePost() {
           </div>
 
           {(showImageUpload || imageUrl) && (
-            <div className="border rounded-lg p-4">
-              <ImageUpload
+            <div className="flex justify-center border rounded-lg p-4">
+              <ImageUpload 
                 endpoint="postImage"
                 value={imageUrl}
                 onChange={(url) => {

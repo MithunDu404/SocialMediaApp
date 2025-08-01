@@ -26,7 +26,7 @@ function ImageUpload({ endpoint, onChange, value }: ImageUploadProps) {
   }
   return (
     <UploadDropzone
-      className="ut-label:text-lg ut-allowed-content:ut-uploading:text-red-300 border-none"
+      className="ut-label:text-lg ut-allowed-content:ut-uploading:text-red-300 border-none size-50"
       endpoint={endpoint}
       onClientUploadComplete={(res) => {
         onChange(res?.[0].url);
