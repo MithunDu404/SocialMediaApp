@@ -27,18 +27,7 @@ SocialMediaApp is an opinionated full-stack application template for building a 
 - Likes and comments
 - Follow / unfollow other users
 - Basic notifications feed (for likes, comments, follows)
-- RESTful API for backend; SPA for frontend
-- Tests and linting scaffolding
-
-## Tech Stack (suggested)
-- Backend: Node.js + Express (or your preferred framework)
-- Database: MongoDB (Mongoose) or PostgreSQL (Sequelize/TypeORM)
-- Authentication: JSON Web Tokens (JWT) or sessions (Passport)
-- Frontend: React (Create React App / Vite) or Next.js
-- File storage: AWS S3, Cloudinary, or local storage
-- Dev tools: Docker, ESLint, Prettier, Jest / Testing Library
-
-Adjust the stack list to match the actual repository.
+- RESTful API for backend
 
 ## Architecture
 - Backend exposes a versioned REST API (e.g., /api/v1/...)
@@ -115,12 +104,6 @@ Security: never commit real secrets to source control. Use a secrets manager or 
 - If using PostgreSQL: update DATABASE_URL with connection string and run migrations
 - For media (images/videos): configure S3 or Cloudinary credentials and update storage configuration in the backend
 
-Optional: Docker Compose
-- Provide a docker-compose.yml to run app + db + any dependent services (Redis, etc.). Example services:
-  - app (build from Dockerfile)
-  - mongo (official image)
-  - redis (optional)
-
 ## Running Tests & Linting
 - Run backend tests:
   cd server
@@ -142,14 +125,6 @@ Adjust the commands to match repository script names.
   - Ensure environment variables are set in the hosting service
   - Use managed DB (MongoDB Atlas, AWS RDS) for production
 
-Checklist for production:
-- Secure JWT secrets & DB credentials
-- Enable HTTPS & CORS configuration
-- Rate limiting, input validation, and sanitization
-- Use a CDN or object storage for media
-- Add monitoring / error reporting (Sentry, LogDNA)
-- Run database backups and migrations in CI
-
 ## Contribution
 Contributions are welcome! Suggested process:
 1. Fork the repository
@@ -160,40 +135,11 @@ Contributions are welcome! Suggested process:
 
 Please follow the coding style used in the project and add/update tests for any new behavior.
 
-## Suggested File Structure
-(This is an example — modify to match the actual repo)
-- server/
-  - src/
-    - controllers/
-    - models/
-    - routes/
-    - middleware/
-    - utils/
-    - index.js
-  - tests/
-  - package.json
-- client/
-  - src/
-    - components/
-    - pages/
-    - services/
-    - app.css
-  - package.json
-- .env.example
-- docker-compose.yml
-- README.md
-
 ## License
 Specify the project license (e.g., MIT). If no license file exists, add one (LICENSE or LICENSE.md) and update this section.
 
 ## Contact
 Maintainer: MithunDu404
 - GitHub: https://github.com/MithunDu404
-
-If you’d like, tell me:
-- which stack (Node/Mongo/React, Rails/Postgres, Django/DRF/React, etc.) this repo actually uses,
-- or provide the repo's file structure or package.json files,
-
-and I will regenerate a README that matches the real repo (including exact commands, script names, and environment variables).
 
 Thank you — happy building!
